@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+
+  <com.google.android.material.tabs.TabLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/tablayout"
+      app:tabIndicatorFullWidth="true"
+      app:tabIndicatorGravity="bottom"
+      app:tabIndicatorColor="#3E3C3C"
+      android:background="@android:color/transparent"
+     />
+  <androidx.viewpager.widget.ViewPager
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/tablayout"
+      android:layout_above="@+id/bottomframe"
+      android:id="@+id/viewpager"/>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+
+      android:layout_alignParentBottom="true"
+      android:id="@+id/bottomframe">
+    <ImageView
+        android:layout_width="69dp"
+        android:layout_height="18dp"
+
+        android:scaleType="centerCrop"
+        android:src="@drawable/remove"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+  </LinearLayout>
+
+  <!--<androidx.coordinatorlayout.widget.CoordinatorLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+      android:id="@+id/bottomframe">
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.example.reverb.OnPlayBottomFrag"
+      tools:layout="@layout/fragment_on_play_bottom"/>
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+
+</RelativeLayout>
